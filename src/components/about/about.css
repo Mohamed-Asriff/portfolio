@@ -11,6 +11,7 @@
 }
 
 .about__info{
+    display: grid; 
     justify-content: space-between;
     grid-template-columns: repeat(2, 200px);
     gap: 0.5rem;
@@ -65,7 +66,6 @@
         padding: 0.75rem 0.5rem;
     }
 
-    /* THIS IS THE FIX: Centers text and button */
     .about__data{
         text-align: center;
         display: flex;
@@ -83,10 +83,11 @@
     }
 }
   
-/* For medium devices */
+/* For medium devices (Mobile) */
 @media screen and (max-width: 576px) {
     .about__info{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 
     .about__description{
@@ -94,9 +95,15 @@
     }
 }
   
-/* For small devices */
+/* For small devices (Very small phones) */
 @media screen and (max-width: 350px) {
     .about__info{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr; 
+        justify-items: center;
+    }
+    
+    .about__box {
+        width: 100%; 
+        max-width: 200px; 
     }
 }
