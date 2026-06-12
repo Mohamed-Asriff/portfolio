@@ -24,6 +24,7 @@
     text-align: center;
     padding: 1rem 1.25rem;
 }
+
 .about__icon{
     font-size: 1.5rem;
     color: var(--title-color);
@@ -44,6 +45,13 @@
     margin-bottom: var(--mb-2-5);
 }
 
+.about__box:hover{
+    background-color: rgb(140, 135, 135);
+    transition: 0.3s;
+    color: white;
+}
+
+/* For large/medium devices */
 @media screen and (max-width: 992px) {
     .about__container{
         grid-template-columns: 1fr;
@@ -56,9 +64,15 @@
     .about__box{
         padding: 0.75rem 0.5rem;
     }
+
+    /* THIS IS THE FIX: Centers text and button */
     .about__data{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
         align-items: center;
     }
+
     .about__info{
         justify-content: center;
     }
@@ -67,10 +81,10 @@
         padding: 0 5rem;
         margin-bottom: 2rem;
     }
-  }
+}
   
-  /* For medium devices */
-  @media screen and (max-width: 576px) {
+/* For medium devices */
+@media screen and (max-width: 576px) {
     .about__info{
         grid-template-columns: repeat(3, 1fr);
     }
@@ -78,16 +92,11 @@
     .about__description{
         padding: 0;
     }
-  }
+}
   
-  /* For small devices */
-  @media screen and (max-width: 350px) {
+/* For small devices */
+@media screen and (max-width: 350px) {
     .about__info{
         grid-template-columns: repeat(2, 1fr);
     }
-  }
-  .about__box:hover{
-    background-color: rgb(140, 135, 135);
-    transition: 0.3s;
-    color: white;
-  }
+}
