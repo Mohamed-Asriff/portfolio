@@ -34,7 +34,7 @@ const Header = () => {
     <header className="header">
       <nav className="nav ">
         <a href="index.html" className="nav_logo">
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Mohamed Asriff Logo" />
         </a>
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
@@ -42,6 +42,7 @@ const Header = () => {
             <li className="nav__item">
               <a
                 href="#home"
+                onClick={() => showMenu(false)}
                 className={
                   activeNav === "#home" ? "nav__link active-link" : "nav__link"
                 }
@@ -53,6 +54,7 @@ const Header = () => {
             <li className="nav__item">
               <a
                 href="#about"
+                onClick={() => showMenu(false)}
                 className={
                   activeNav === "#about" ? "nav__link active-link" : "nav__link"
                 }
@@ -64,6 +66,7 @@ const Header = () => {
             <li className="nav__item">
               <a
                 href="#skills"
+                onClick={() => showMenu(false)}
                 className={
                   activeNav === "#skills"
                     ? "nav__link active-link"
@@ -76,7 +79,22 @@ const Header = () => {
 
             <li className="nav__item">
               <a
+                href="#portfolio"
+                onClick={() => showMenu(false)}
+                className={
+                  activeNav === "#portfolio"
+                    ? "nav__link active-link"
+                    : "nav__link"
+                }
+              >
+                <i className="uil uil-scenery nav__icon"></i>Projects
+              </a>
+            </li>
+
+            <li className="nav__item">
+              <a
                 href="#qualifications"
+                onClick={() => showMenu(false)}
                 className={
                   activeNav === "#qualifications"
                     ? "nav__link active-link"
@@ -89,19 +107,8 @@ const Header = () => {
 
             <li className="nav__item">
               <a
-                href="#portfolio"
-                className={
-                  activeNav === "#portfolio"
-                    ? "nav__link active-link"
-                    : "nav__link"
-                }
-              >
-                <i className="uil uil-scenery nav__icon"></i>Portfolio
-              </a>
-            </li>
-            <li className="nav__item">
-              <a
                 href="#contact"
+                onClick={() => showMenu(false)}
                 className={
                   activeNav === "#contact"
                     ? "nav__link active-link"
@@ -113,13 +120,13 @@ const Header = () => {
             </li>
           </ul>
           <i
-            class="uil uil-times nav__close"
+            className="uil uil-times nav__close"
             onClick={() => showMenu(!Toggle)}
           ></i>
         </div>
 
         <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
-          <i class="uil uil-apps"></i>
+          <i className="uil uil-apps"></i>
         </div>
       </nav>
     </header>

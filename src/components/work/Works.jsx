@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from "react";
-import { projectsData } from "./Data";
-import { projectsNav } from "./Data";
+import { projectsData, projectsNav } from "../../data/projects";
 import WorkItems from "./WorkItems";
 
 const Works = () => {
-  const [item, setItem] = useState({ name: "all" });
+  const [item, setItem] = useState({ name: "All" });
   const [projects, setProjects] = useState([]);
   const [active, setActive] = useState(0);
 
   useEffect(() => {
-    if (item.name === "all") {
+    if (item.name === "All") {
       setProjects(projectsData);
     } else {
-      const newProjects = projectsData.filter((project) => {
-        return project.category === item.name;
-      });
+      const newProjects = projectsData.filter((project) =>
+        project.categories.includes(item.name)
+      );
       setProjects(newProjects);
     }
   }, [item]);
 
-  const handleClick = (e, index)=>{
-    setItem({name: e.target.textContent});
+  const handleClick = (e, index) => {
+    setItem({ name: e.target.textContent });
     setActive(index);
-  }
+  };
 
   return (
     <div>
@@ -43,13 +42,7 @@ const Works = () => {
       </div>
       <div className="work__container container grid">
         {projects.map((item) => {
-          return (
-            <WorkItems
-              item={item}
-              key={item.id}
-              deploymentLink={item.deploymentLink}
-            />
-          );
+          return <WorkItems item={item} key={item.id} />;
         })}
       </div>
     </div>

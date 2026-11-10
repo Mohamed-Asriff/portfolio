@@ -24,7 +24,7 @@ const Contact = () => {
 
       <div className="contact__container grid">
         <div className="contact__content">
-          <h3 className="contact__title">Talk to me</h3>
+          <h3 className="contact__title">Reach out</h3>
 
           <div className="contact__info">
             <div className="contact__card">
@@ -47,37 +47,44 @@ const Contact = () => {
             </div>
 
             <div className="contact__card">
-              <i className="bx bxl-whatsapp contact__card-icon"></i>
+              <i className="bx bxl-linkedin contact__card-icon"></i>
 
-              <h3 className="contact__card-title">WhatsApp</h3>
-              <span className="contact__card-data">+94 741938689</span>
+              <h3 className="contact__card-title">LinkedIn</h3>
+              <span className="contact__card-data">Mohamed Asriff</span>
 
               <a
-                href="https://api.whatsapp.com/send?phone=94741938689&text=Hello, more information!"
+                href="https://www.linkedin.com/in/mohamed-asriff-122as315/"
                 className="contact__button"
                 target="_blank"
                 rel="noreferrer"
               >
-                Write me{" "}
+                Connect
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
             </div>
 
             <div className="contact__card">
-              <i className="bx bxl-telegram contact__card-icon"></i>
+              <i className="bx bxl-github contact__card-icon"></i>
 
-              <h3 className="contact__card-title">Telegram</h3>
-              <span className="contact__card-data">@Mhd_Arf</span>
+              <h3 className="contact__card-title">GitHub</h3>
+              <span className="contact__card-data">Mohamed-Asriff</span>
 
               <a
-                href="https://t.me/Mhd_Arf"
+                href="https://github.com/Mohamed-Asriff"
                 className="contact__button"
                 target="_blank"
                 rel="noreferrer"
               >
-                Write me
+                View profile
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
+            </div>
+
+            <div className="contact__card">
+              <i className="bx bx-map contact__card-icon"></i>
+
+              <h3 className="contact__card-title">Location</h3>
+              <span className="contact__card-data">Colombo, Sri Lanka</span>
             </div>
           </div>
         </div>
@@ -88,10 +95,11 @@ const Contact = () => {
             <div className="contact__form-div">
               <label className="contact__form-tag">Name</label>
               <input
-                type="name"
+                type="text"
                 name="name"
                 className="contact__form-input"
                 placeholder="Enter your name"
+                required
               />
             </div>
             <div className="contact__form-div">
@@ -101,20 +109,21 @@ const Contact = () => {
                 name="email"
                 className="contact__form-input"
                 placeholder="Insert your email"
+                required
               />
             </div>
 
             <div className="contact__form-div contact__form-area">
-              <label className="contact__form-tag">Query</label>
+              <label className="contact__form-tag">Message</label>
               <textarea
                 name="query"
                 cols="30"
                 rows="10"
                 className="contact__form-input"
-                placeholder="Enter your query/request here"
+                placeholder="Enter your message here"
               ></textarea>
             </div>
-            <button className="button button--flex">
+            <button className="button button--flex" type="submit">
               Send Message
               <svg
                 className="button__icon"

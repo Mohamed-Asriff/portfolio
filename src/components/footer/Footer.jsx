@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__container container">
-        <h1 className="footer__title">Dawood Mohamed Asriff</h1>
+        <h1 className="footer__title">Mohamed Asriff</h1>
         <ul className="footer__list">
           <li>
             <a href="#about" className="footer__link">
@@ -28,12 +28,13 @@ const Footer = () => {
 
         <div className="footer__social">
           <a
-            href="https://www.instagram.com/mohamed_asriff/"
+            href="https://www.linkedin.com/in/mohamed-asriff-122as315/"
             className="footer__social-link"
             target="_blank"
             rel="noreferrer"
+            aria-label="LinkedIn"
           >
-            <i className="uil uil-instagram"></i>
+            <i className="bx bxl-linkedin"></i>
           </a>
 
           <a
@@ -41,13 +42,14 @@ const Footer = () => {
             className="footer__social-link"
             target="_blank"
             rel="noreferrer"
+            aria-label="GitHub"
           >
             <i className="uil uil-github-alt"></i>
           </a>
         </div>
 
         <span className="footer__copy">
-          &#169; Dawood Mohamed Asriff. All rights reserved
+          &#169; Mohamed Asriff. All rights reserved
         </span>
       </div>
     </footer>
